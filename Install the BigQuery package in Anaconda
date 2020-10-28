@@ -1,19 +1,20 @@
 conda config --add channels conda-forge
 conda config --set channel_priority strict
-( The Pyarrow  latest version is available from the conda-forge channel. If you want to install it from there, it is recommended to create a new conda environment)
 
+(The Pyarrow  latest version is available from the conda-forge channel. it is recommended to create a new conda environment)
 conda create -n antpyk pyarrow=0.16.0
->pyarrow                   0.16.0
+>pyarrow                   0.16.
+
 conda install nb_conda (jupyter extensions)
 conda install google-cloud-bigquery
 >google-cloud-bigquery     1.25.0   
  
-module 'google.protobuf.descriptor' has no attribute '_internal_create_key' 
+Error: module 'google.protobuf.descriptor' has no attribute '_internal_create_key' 
 pip install --upgrade protobuf 
->Successfully installed protobuf-3.13.0
+>protobuf                  3.13.0
 
-'ClientOptions' object has no attribute 'scopes'
-google-cloud-core==1.3.0
+Error: 'ClientOptions' object has no attribute 'scopes'
+upgrade version of google-cloud-core
 
 conda update -n base -c defaults conda
 conda update -n antpyk --all
@@ -21,7 +22,8 @@ conda update -n antpyk --all
 >google-cloud-core         1.4.0
 >protobuf                  3.13.0
 >pyarrow                   2.0.0
-AttributeError: 'ClientOptions' object has no attribute 'scopes'
+
+Error: AttributeError: 'ClientOptions' object has no attribute 'scopes'
 pip install --upgrade google-cloud-core/api-core 
 >google-cloud-core         1.4.3
 >google-api-core           1.23.0
